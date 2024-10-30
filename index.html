@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web site</title>
     <link rel="stylesheet" href="style.css">
+    <!-- box icons -->
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
@@ -14,27 +15,77 @@
         <a href="#" class="logo">Berat's website.</a>
 
         <nav class="navbar">
-            <a href="#" class="active">Main</a>
-            <a href="#">Resume</a>
-            <a href="#">Contact</a>
+            <a href="#home" class="active">Main</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
     
-        <section class="home">
-            <div class="home-content">
-                <h1>Hi, You can call me as "Berat"</h1>
-                <h3>Curious software developer who enjoys outdoor events | Ai | Python| C++ | C# | Front-End |</h3>
-                <p>Throughout my academic life, I strive to develop myself and seize every opportunity. I excel in programming languages and I'm always happy to complete given assignments. In order to accelerate my own development process, I take online courses, practice on websites like Leetcode, and work on small projects by myself.
-                    <br><br>
-                    Aside from university, my interests and hobbies include horseback riding, hiking, camping, swimming, woodworking, listening to music, and spending time with my friends.
-                    <br><br>
-                    I have an open-minded personality and have always been interested in developing new projects and ideas since childhood. I can communicate easily with people and have self-confidence to address large groups and give speeches. I enjoy researching topics related to software development, artificial intelligence, full stack web development.</p>
-                <div class="btn-box">
-                    <a href="#">Check my LinkedIn</a>
-                    <a href="#">Go to my GitHub</a>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, You can call me as <span>"Berat"</span> </h1>
+            <h3>Curious software developer who enjoys outdoor events | Ai | Python| C++ | C# | Front-End |</h3>
+            <p>Throughout my academic life, I strive to develop myself and seize every opportunity. I excel in programming languages and I'm always happy to complete given assignments. In order to accelerate my own development process, I take online courses, practice on websites like Leetcode, and work on small projects by myself.
+                <br><br>
+                Aside from university, my interests and hobbies include horseback riding, hiking, camping, swimming, woodworking, listening to music, and spending time with my friends.
+                <br><br>
+                I have an open-minded personality and have always been interested in developing new projects and ideas since childhood. I can communicate easily with people and have self-confidence to address large groups and give speeches. I enjoy researching topics related to software development, artificial intelligence, full stack web development.</p>
+            <div class="btn-box">
+                <a href="https://www.linkedin.com/in/m-berat-canpolat-42335820b/" class="btn">
+                    <i class='linkedin'></i> Check my LinkedIn
+                </a>
+                <a href="https://github.com/Oneseccc" class="btn">
+                    <i class='github'></i> Go to my GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+        <!--Resume page-->
+    <section class="resume" id="resume">
+            <h2 class="heading"><span>My</span> Resume</h2>
+
+        <div class="about-image">
+            <img src="img.jpeg" alt="">
+            <span class="circle-spin"></span>
+        </div>
+
+        <div class="resume-content">            
+            <h2>Education</h2>
+            <p>As a Computer Systems graduate from Riga Technical University, I've developed a strong foundation in both theoretical and practical aspects of software development. My expertise spans across various technologies including Python, AI frameworks like TensorFlow and PyTorch, and full-stack development. I'm particularly proud of my projects in game development and e-commerce, where I've applied my skills to create real-world solutions. Currently serving as Deputy Head of Public Relations in the International Students Council, I combine my technical skills with leadership abilities to make a positive impact in the university community.</p>
+
+
+            <div class="btn-box btns">
+                <a href="https://drive.google.com/file/d/1-q8y9vIDlSQXAx9nZeAUEWAs6iTWjM7C/view?usp=drive_link" 
+                   class="btn" 
+                   target="_blank">
+                    <i class='file'></i> Check Full Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class='envelope'></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:it.canpolat.berat@gmail.com">it.canpolat.berat@gmail.com</a></p>
+                </div>
+
+                <div class="contact-card">
+                    <i class='map'></i>
+                    <h3>Location</h3>
+                    <p>Riga, Latvia</p>
                 </div>
             </div>
-        </section>
+            </div>
+    </section>
 
+    <script type="js/script.js"></script>
 </body>
 </html>

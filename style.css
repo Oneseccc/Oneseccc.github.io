@@ -4,12 +4,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
     font-family: 'Teko', sans-serif;
 }
 
+:root {
+    --primary-color: #070506;
+    --secondary-color: #3887BE;
+    --text-color: #DCF2F1;
+    --main-color: #52D3D8;
+}
+
+html {
+    font-size: 85%;
+    overflow-x: hidden;
+}
+
 body {
-    background-color: #0C080B;
-    color: #DCF2F1;
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .header {
@@ -17,101 +32,97 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
-    background-color: transparent !important;
+    padding: 2rem 2%;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    text-decoration: none;
 }
 
 .logo {
-    font-size: 30px;
+    font-size: 3rem;
+    color: var(--text-color);
     font-weight: 600;
-    padding: 0 10%;
-    font-style: bold;
-    color: #DCF2F1;
     text-decoration: none;
-    text-transform: uppercase;
-}
-
-.navbar {
-    padding: 0 10%;
 }
 
 .navbar a {
-    margin: 0 5px;
-    font-size: 30px;
-    font-style: bold;
+    font-size: 2rem;
+    color: var(--text-color);
     font-weight: 500;
-    color: #DCF2F1;
+    margin: 1.5rem;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: #52D3D8;
+    color: var(--main-color);
     transition: 0.8s;
+}
+
+section {
+    min-height: 100vh;
+    padding: 20rem 5% 10rem;
 }
 
 .home {
     display: flex;
-    height: 100vh;
+    padding: 0 5%;
     background: url('pjek279c1h671.gif') no-repeat right center;
     background-size: auto 50%;
     align-items: center;
-    padding: 0 10%;
 }
 
 .home-content {
-    width: 80%;
-}
-.home-content h1 {
-    font-size: 50px;
-    font-weight: 700;
-    color: #DCF2F1;
-    text-decoration: none;
-    line-height: 1.2;
+    max-width: 70rem;
 }
 
-.home-content h3 {
-    font-size: 30px;
-    font-weight: 500;
-    color: #52D3D8;
+.home-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
     text-decoration: none;
+}
+
+
+.home-content h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--main-color);
 }
 
 .home-content p {
-    margin: 20px 0 40px;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 500;
-    color: #DCF2F1;
+    margin: 2rem 0 4rem;
     text-decoration: none;
 }
 
-.home-content .btn-box {
+.btn-box {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    width: 345px;
-    height: 50px;
+    width: 28rem;
+    height: 4rem;
 }
 
-.btn-box a {
+.btn-box .btn {
     position: relative;
     display: inline-flex;
-    width: 150px;
-    height: 100%;
-    background: #3887BE;
-    border: 2px solid #3887BE;
-    border-radius: 8px;
-    font-size: 20px;
-    color: #DCF2F1;
-    text-decoration: none;
-    font-weight: 500;
     justify-content: center;
     align-items: center;
-    letter-spacing: .7px;
+    text-decoration: none;
+    width: 12rem;
+    height: 100%;
+    background: var(--secondary-color);
+    border: .2rem solid var(--secondary-color);
+    border-radius: .8rem;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    font-weight: 500;
     z-index: 1;
     overflow: hidden;
 }
@@ -145,4 +156,174 @@ body {
 .btn-box a:hover::before{
     width: 100%;
     transition: 0.8s;
+}
+
+.resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--primary-color);
+    padding-bottom: 6rem;
+}
+
+.heading {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.about-image {
+    position: relative;
+    width: 15rem; 
+    height: 15rem; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+    object-fit: cover;
+    object-position: 0 -8rem;
+}
+
+.about-image .circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--primary-color);
+    border-bottom: .2rem solid var(--primary-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}
+
+.resume-content {
+    text-align: center;
+}
+
+.resume-content h2 {
+    font-size: 3rem;
+}
+
+.resume-content p {
+    font-size: 1.5rem;
+    margin: 2rem 0 3rem; 
+}
+
+.btn-box.btns {
+    display: inline-block;
+    width: 15rem;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: rgba(0, 0, 0, .1);
+    padding: 2.5rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid rgba(0, 0, 0, .2);
+    transition: .5s ease;
+    width: 320px;
+}
+
+.contact-card:hover {
+    border-color: #0ef;  /* This should match your website's accent color */
+    transform: scale(1.02);
+}
+
+.contact-card i {
+    font-size: 4rem;
+    color: #0ef;  /* This should match your website's accent color */
+    margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    font-size: 1.6rem;
+}
+
+.contact-card a {
+    color: inherit;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.contact-card a:hover {
+    color: #0ef;  
+}
+
+/* Icons */
+.envelope::before {
+    content: '\📧'; 
+}
+
+.map::before {
+    content: '\📍'; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 3.5rem;
+    }
+
+    .contact-card {
+        width: 280px;
+        padding: 2rem;
+    }
+
+    .contact-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .contact-card p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .heading {
+        font-size: 3rem;
+    }
+
+    .contact-info {
+        gap: 2rem;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 300px;
+    }
 }
